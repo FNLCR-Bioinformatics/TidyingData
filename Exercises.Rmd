@@ -48,7 +48,7 @@ Convert the iris data set to a tibble.
 data(iris)
 str(iris)
 
-iris_tibble <- as_tibble(iris)
+str(as_data_frame(iris))
 ```
 
 How can you verify that your modified `iris` data set is formatted as a tibble?
@@ -87,6 +87,17 @@ nss15 <- read_delim("Data/nss15.tsv", "\t", escape_double = FALSE, trim_ws = TRU
 
 
 ### mutate code converting codes into human readable labels goes here
+require(dplyr)
+nss15 <- mutate(nss15,
+                sex = get_label(sex, gender_lab),
+                race = get_label(race, race_lab),
+                diag = get_label(diag, diag_lab),
+                body_part = get_label(body_part, body_part_lab),
+                disposition = get_label(disposition, disposition_lab),
+                location = get_label(location, location_lab),
+                fmv = get_label(fmv, fmv_lab),
+                prod1 = get_label(prod1, product_lab),
+                prod2 = get_label(prod2, product_lab))
 require(dplyr)
 nss15 <- mutate(nss15,
                 sex = get_label(sex, gender_lab),
