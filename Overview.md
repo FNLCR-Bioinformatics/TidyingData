@@ -9,13 +9,13 @@ information:
     -   `%>%`
     -   `mutate`
     -   `tibble`
-    -   miscelaneous data processing tools in the `tidyverse`
+    -   miscellaneous data processing tools in the `tidyverse`
 
 What is tidy data?
 ==================
 
 In short, tidy data has one row per observation, and one column per
-measurement. For example, whe `who` data set is well organized and
+measurement. For example, the `who` data set is well organized and
 compact, but it is does not meet the definition of tidy:
 
     # load the who data set from the tidyr package
@@ -58,7 +58,7 @@ compact, but it is does not meet the definition of tidy:
     ## #   newrel_f3544 <int>, newrel_f4554 <int>, newrel_f5564 <int>,
     ## #   newrel_f65 <int>
 
-The `who` data set has information from thw World Health Organization on
+The `who` data set has information from the World Health Organization on
 TB cases recorded by country, age and sex. It is not tidy because
 multiple variables are encoded in many of the columns, and incidence is
 spread over columns 5 through 60 (e.g. `new_sp_m014` contains incidence
@@ -110,8 +110,8 @@ For some additional information on tidy data, see [Ravi's
 slides](blob/master/TidyingData-StatForLunch.pdf) from his Statistics
 for Lunch talk.
 
-Why use the `tidyvese`?
-=======================
+Why use the `tidyverse`?
+========================
 
 There are many reasons to use `tidyverse` - I've listed my favorite
 parts of the `tidyverse` here, but there are many more that we don't
@@ -133,7 +133,7 @@ dependencies):
 -   dplyr: Data manipulation tools.
 -   stringr: String manipulation tools.
 -   forcats: Categorical data (i.e. `factor`) manipulation tools.
--   magrittr: This packge isn't actually loaded, but the pipe operator,
+-   magrittr: This package isn't actually loaded, but the pipe operator,
     `%>%`, is imported.
 
 There are a number of additional dependencies that are installed when
@@ -157,7 +157,7 @@ details):
 -   [rvest](https://cran.r-project.org/web/packages/rvest/rvest.pdf)
 -   [xml2](https://cran.r-project.org/web/packages/xml2/index.html)
 -   [feather](https://blog.rstudio.com/2016/03/29/feather/)
--   [knir](https://cran.r-project.org/web/packages/knitr/index.html)
+-   [knitr](https://cran.r-project.org/web/packages/knitr/index.html)
 -   [rmarkdown](https://cran.r-project.org/web/packages/markdown/index.html)
 
 Pipes
@@ -265,16 +265,16 @@ Examples:
     # by default, these both produce the same result
     Sys.time()
 
-    ## [1] "2018-04-11 10:40:41 EDT"
+    ## [1] "2018-04-11 10:52:35 EDT"
 
     now()
 
-    ## [1] "2018-04-11 10:40:41 EDT"
+    ## [1] "2018-04-11 10:52:35 EDT"
 
     # however, now() can be used to get the time in a different timezone
     now("GMT")
 
-    ## [1] "2018-04-11 14:40:41 GMT"
+    ## [1] "2018-04-11 14:52:35 GMT"
 
     #### the Wall Street Market crash of 1929
     crash <- strptime("Oct 29, 1929 9:30 AM", format = "%B %d, %Y %H:%M %p")
